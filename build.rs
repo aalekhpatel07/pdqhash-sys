@@ -9,7 +9,6 @@ fn main() -> miette::Result<()> {
     .compile("pdqhash-sys");
 
     println!("cargo:rerun-if-changed=src/main.rs");
-    println!("cargo:rerun-if-changed=src/CImg.h");
 
     Ok(())
 }
