@@ -3,4 +3,20 @@ name = "pdqhash-sys"
 version = "0.1.0"
 edition = "2021"
 
+[features]
+default = ["image"]
+image = ["dep:image"]
+
 [dependencies]
+autocxx = "0.26.0"
+cxx = "1.0.117"
+hex = "0.4.3"
+image = { version = "^0.23.14", optional = true }
+
+[build-dependencies]
+autocxx-build = "0.26.0"
+cxx-build = "1.0"
+miette = { version = "5", features = ["fancy"] }
+
+[dev-dependencies]
+miette = { version = "7.1.0", features = ["fancy"] }
